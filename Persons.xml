@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl"?>
+<Persons>
+  <Person>
+    <Name>
+      <First>Ryan</First>
+      <Last>Thomas</Last>
+    </Name>
+    <Credential>
+      <ID>rthomas</ID>
+      <password Encryption="yes">xyz</password>
+    </Credential>
+    <Phone>
+      <Work>4809650000</Work>
+      <Cell>4801234567</Cell>
+    </Phone>
+    <Category>Friend</Category>
+  </Person>
+  <Person>
+    <Name>
+      <First>Carmine</First>
+      <Last>Lettieri</Last>
+    </Name>
+    <Credential>
+      <ID>cletti</ID>
+      <password Encryption="yes">encpass</password>
+    </Credential>
+    <Phone>
+      <Work>4809650001</Work>
+      <Cell>4802345678</Cell>
+    </Phone>
+    <Category>Friend</Category>
+  </Person>
+  <Person>
+    <Name>
+      <First>Chris</First>
+      <Last>Scott</Last>
+    </Name>
+    <Credential>
+      <ID>cscott</ID>
+      <password Encryption="yes">mypass</password>
+    </Credential>
+    <Phone>
+      <Work>4809650002</Work>
+      <Cell Provider="Verizon">4803456789</Cell>
+    </Phone>
+    <Category>Family</Category>
+  </Person>
+  <Person>
+    <Name>
+      <First>Gary</First>
+      <Last>Scott</Last>
+    </Name>
+    <Credential>
+      <ID>cletti</ID>
+      <password Encryption="yes">workpass</password>
+    </Credential>
+    <Phone>
+      <Work>4809650003</Work>
+      <Cell Provider="Verizon">4804567890</Cell>
+    </Phone>
+    <Category>Family</Category>
+  </Person>
+  <Person>
+    <Name>
+      <First>Ray</First>
+      <Last>Fischer</Last>
+    </Name>
+    <Credential>
+      <ID>rfisch</ID>
+      <password Encryption="yes">fischpass</password>
+    </Credential>
+    <Phone>
+      <Work>4809650004</Work>
+      <Cell>4800123456</Cell>
+    </Phone>
+    <Category>Friend</Category>
+  </Person>
+</Persons>

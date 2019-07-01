@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://venus.eas.asu.edu/WsRepository/xml" targetNamespace="http://venus.eas.asu.edu/WsRepository/xml" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en"> Persons </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="Persons" type="PersonsType"/>
+  <xsd:complexType name="PersonsType">
+    <xsd:sequence>
+      <xsd:element name="Person" type="PersonDetails" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PersonDetails">
+    <xsd:sequence>
+      <xsd:element name="Name" type="NameType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Credential" type="CredentialType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Phone" type="PhoneType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Category" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="NameType">
+    <xsd:sequence>
+      <xsd:element name="First" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Last" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CredentialType">
+    <xsd:sequence>
+      <xsd:element name="ID" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Password" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="Encryption" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="PhoneType">
+    <xsd:sequence>
+      <xsd:element name="Work" type="PhoneFormat" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Cell" type="PhoneFormat" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="Provider" type="xsd:string" use="optional"/>
+  </xsd:complexType>
+  <xsd:simpleType name="PhoneFormat">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\d{3}\-\d{3} \d{4}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>
